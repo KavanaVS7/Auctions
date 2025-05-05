@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auction Home</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        .items-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .item-card {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 15px;
+            width: 250px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .item-card img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+        .item-card h3 {
+            margin-top: 10px;
+            color: #444;
+        }
+        .item-card p {
+            font-size: 14px;
+            color: #666;
+        }
+        .price {
+            font-weight: bold;
+            color: #007BFF;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Welcome to the Auction Home</h1>
+
+<div class="items-container">
+    {% for item in items %}
+    <div class="item-card">
+        
+        <h3>{{ item.Name }}</h3>
+        <p>{{ item.description }}</p>
+      
+    </div>
+    {% endfor %}
+</div>
+
+</body>
+</html>
